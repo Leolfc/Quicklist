@@ -21,6 +21,12 @@ form.addEventListener("submit", (event) => {
     <button class="delete" type="button">
       <img src="img/Frame-2.png" alt="" />
     </button>
+
+<p class="warning">
+          <img src="img/warning-circle-filled.png" alt="" />
+          O item foi removido da lista
+          <img class="warning_remove" src="img/deleteSmall.svg" alt="" />
+        </p>
   `;
 
   if (!listaLimpa) {
