@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
   const li = document.createElement("li");
   li.innerHTML = `
     <div class="container_name_item">
-      <input class="input-task" type="radio" />
+      <input class="input-task" type="checkbox" />
       <span>${inputItem.value}</span>
     </div>
 
@@ -22,6 +22,7 @@ form.addEventListener("submit", (event) => {
       <img src="img/Frame-2.png" alt="" />
     </button>
   `;
+
   if (!listaLimpa) {
     itenspadrao.innerHTML = "";
     listaLimpa = true;
@@ -31,10 +32,15 @@ form.addEventListener("submit", (event) => {
     const pegandoItem = event.target.closest("li");
     if (pegandoItem) {
       pegandoItem.remove();
+      alerta();
+      removeAlert();
+     
     }
   });
+ 
   itenspadrao.appendChild(li);
   inputItem.value = "";
+   select()
 });
 
 const botaoDelete = document.querySelectorAll(".delete");
@@ -43,6 +49,42 @@ botaoDelete.forEach((button) => {
     const pegandoItem = event.target.closest("li");
     if (pegandoItem) {
       pegandoItem.remove();
+      alerta();
+      removeAlert();
     }
   });
 });
+
+const p = document.querySelector(".warning");
+//função para exibir alerta
+function alerta() {
+   p.style.display = "flex";
+  setTimeout(() => {
+    p.style.display = "none";
+  }, 1000);
+  
+}
+//funcção para remover alerta
+function removeAlert() {
+  const imgWarning = document.querySelector(".warning_remove");
+  imgWarning.addEventListener("click", () => {
+    p.style.display = "none";
+  });
+}
+
+//Função para riscar o item da lista
+function select(){
+  const inputCheckbox = document.querySelectorAll(".input-task")
+  const nameItem = document.querySelectorAll(".container_name_item")
+  inputCheckbox.forEach((input)=>{
+    input.addEventListener("change",()=>{
+     if(input.checked){
+       input.parentElement.style.textDecoration = "line-through"
+     }else{
+      input.parentElement.style.textDecoration = "none"
+     }
+    })
+  })
+   
+}
+select()

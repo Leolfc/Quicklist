@@ -29,6 +29,7 @@ main {
   }
   h1 {
     margin-bottom: 2.75rem;
+  
   }
   #input_item {
     width: 28.18rem;
@@ -77,6 +78,30 @@ header {
   .delete {
     cursor: pointer;
   }
+  .warning{
+    
+    margin-top: 36px;
+    background-color: var(--color-danger);
+    padding: 12px 12px;
+    width: 369px;
+    border-radius: 12px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    width: 100%;
+    max-width: 100%;
+   
+      
+      & .warning_remove{
+        width: 20px 20px;
+        margin-left: auto;
+        color: white;
+        cursor: pointer;
+      
+    }
+    
+  }
 }
 
 @media (max-width: 650px) {
@@ -112,3 +137,4 @@ header {
 
  
 }
+
