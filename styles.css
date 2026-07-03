@@ -44,6 +44,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   img {
     margin-bottom: 94px;
   }
@@ -87,6 +88,7 @@ header {
     border-radius: 12px;
     display: none;
     align-items: center;
+justify-content: center;
     gap: 8px;
     color: white;
     width: 100%;
