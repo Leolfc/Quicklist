@@ -129,6 +129,7 @@ max-width:100%;
   }
   li {
     max-width: 100%;
+    padding: 8px
   }
 
   .new_item {
