@@ -19,17 +19,18 @@ main {
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
+    
     }
     .container_input {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+     
     }
   }
   h1 {
     margin-bottom: 2.75rem;
-  
   }
   #input_item {
     width: 28.18rem;
@@ -37,6 +38,8 @@ main {
     border-radius: 12px;
     padding: 18px;
     font-size: 16px;
+    max-width: 80%;
+  
   }
 }
 
@@ -45,7 +48,7 @@ header {
   justify-content: center;
   align-items: center;
   img {
-    margin-bottom: 94px;
+    margin:40px 0px 94px 0px
   }
 }
 
@@ -78,8 +81,7 @@ header {
   .delete {
     cursor: pointer;
   }
-  .warning{
-    
+  .warning {
     margin-top: 36px;
     background-color: var(--color-danger);
     padding: 12px 12px;
@@ -91,16 +93,13 @@ header {
     color: white;
     width: 100%;
     max-width: 100%;
-   
-      
-      & .warning_remove{
-        width: 20px 20px;
-        margin-left: auto;
-        color: white;
-        cursor: pointer;
-      
+
+    & .warning_remove {
+      width: 20px 20px;
+      margin-left: auto;
+      color: white;
+      cursor: pointer;
     }
-    
   }
 }
 
@@ -119,7 +118,6 @@ header {
   }
   .item-padrao {
     max-width: 50%;
-  
   }
   li {
     max-width: 100%;
@@ -132,9 +130,6 @@ header {
     font-size: 24px;
     max-width: 50%;
     margin: 10px;
-   
   }
-
  
 }
-
