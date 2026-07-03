@@ -61,7 +61,7 @@ function alerta() {
    p.style.display = "flex";
   setTimeout(() => {
     p.style.display = "none";
-  }, 1000);
+  }, 2000);
   
 }
 //funcção para remover alerta
