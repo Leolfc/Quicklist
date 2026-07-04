@@ -19,14 +19,12 @@ main {
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-    
     }
     .container_input {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-     
     }
   }
   h1 {
@@ -39,7 +37,8 @@ main {
     padding: 18px;
     font-size: 16px;
     max-width: 80%;
-  
+    border:none;
+    border: 2px solid var(--border-primary);
   }
 }
 
@@ -49,7 +48,7 @@ header {
   align-items: center;
   max-width: 100%;
   img {
-    margin:40px 0px 94px 0px
+    margin: 40px 0px 94px 0px;
   }
 }
 
@@ -60,7 +59,7 @@ header {
   align-items: center;
   margin-top: 2.875rem;
   flex-direction: column;
-  max-width:100%;
+  max-width: 100%;
 
   .item-padrao {
     display: flex;
@@ -92,7 +91,7 @@ header {
     border-radius: 12px;
     display: none;
     align-items: center;
-justify-content: center;
+    justify-content: center;
     gap: 8px;
     color: white;
     width: 100%;
@@ -108,30 +107,34 @@ justify-content: center;
 }
 
 @media (max-width: 650px) {
-
   .container_input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-max-width:100%;
+    max-width: 100%;
   }
 
-  main .list_item{
-    width:100%;
+  main .list_item {
+    width: 100%;
     margin: 40px 31px 250px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & .container_name_item span {
-    overflow: scroll;
-    text-overflow: ellipsis;
+    & .container_name_item {
+      display: flex;
+      gap: 8px;
+      overflow: scroll;
+      position: relative;
+      
+     
     }
   }
 
-header{
-max-width:100%;
-
-
-}
+  header {
+    max-width: 100%;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -142,17 +145,16 @@ max-width:100%;
   }
   .item-padrao {
     max-width: 50%;
-    & .warning_container{
-    padding:8px;
-    max-width: 100%;
-    font-size: 16px;
-  }
+    & .warning_container {
+      padding: 8px;
+      max-width: 100%;
+      font-size: 16px;
+    }
   }
   li {
     max-width: 100%;
     padding: 8px;
     font-size: 16px;
-    
   }
 
   .new_item {
@@ -163,6 +165,4 @@ max-width:100%;
     max-width: 50%;
     margin: 10px;
   }
- 
- 
 }
