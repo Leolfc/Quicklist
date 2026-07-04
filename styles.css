@@ -117,6 +117,7 @@ max-width:100%;
 
   main .list_item{
     max-width: 100%;
+    margin: 40px 31px 250px 32px
   }
 
 header{
@@ -137,7 +138,7 @@ max-width:100%;
     & .warning_container{
     padding:8px;
     max-width: 100%;
-    
+    font-size: 16px;
   }
   }
   li {
