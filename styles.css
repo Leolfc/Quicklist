@@ -114,6 +114,11 @@ justify-content: center;
     align-items: center;
 max-width:100%;
   }
+
+  main .list_item{
+    max-width: 100%;
+  }
+
 header{
 max-width:100%;
 
