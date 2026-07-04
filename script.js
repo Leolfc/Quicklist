@@ -33,9 +33,9 @@ form.addEventListener("submit", (event) => {
     const pegandoItem = event.target.closest("li");
     if (pegandoItem) {
       pegandoItem.remove();
-      alerta();
-      removeAlert();
      
+      removeAlert();
+      alerta();
     }
   });
  
@@ -81,8 +81,10 @@ function select(){
     input.addEventListener("change",()=>{
      if(input.checked){
        input.parentElement.style.textDecoration = "line-through"
+       input.parentElement.style.color = "red"
      }else{
       input.parentElement.style.textDecoration = "none"
+      input.parentElement.style.color = "black"
      }
     })
   })

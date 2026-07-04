@@ -78,6 +78,7 @@ header {
     border: 2px solid var(--border-primary);
     border-radius: 12px;
     padding: 12px;
+    font-weight: bold;
   }
   .delete {
     cursor: pointer;
@@ -123,13 +124,22 @@ max-width:100%;
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
+    align-items: left;
+    padding-inline: 32px;
   }
   .item-padrao {
     max-width: 50%;
+    & .warning_container{
+    padding:8px;
+    max-width: 100%;
+    
+  }
   }
   li {
     max-width: 100%;
-    padding: 8px
+    padding: 8px;
+    font-size: 16px;
+    
   }
 
   .new_item {
@@ -140,6 +150,6 @@ max-width:100%;
     max-width: 50%;
     margin: 10px;
   }
-  
+ 
  
 }
