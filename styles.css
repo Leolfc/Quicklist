@@ -60,6 +60,7 @@ header {
   align-items: center;
   margin-top: 2.875rem;
   flex-direction: column;
+  max-width:100%;
 
   .item-padrao {
     display: flex;
@@ -107,6 +108,7 @@ justify-content: center;
 }
 
 @media (max-width: 650px) {
+
   .container_input {
     display: flex;
     flex-direction: column;
@@ -116,8 +118,13 @@ max-width:100%;
   }
 
   main .list_item{
-    max-width: 100%;
-    margin: 40px 31px 250px 32px
+    width:100%;
+    margin: 40px 31px 250px 32px;
+
+    & .container_name_item span {
+    overflow: scroll;
+    text-overflow: ellipsis;
+    }
   }
 
 header{
