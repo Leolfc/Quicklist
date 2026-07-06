@@ -33,15 +33,15 @@ form.addEventListener("submit", (event) => {
     const pegandoItem = event.target.closest("li");
     if (pegandoItem) {
       pegandoItem.remove();
-     
+
       removeAlert();
       alerta();
     }
   });
- 
+
   itenspadrao.appendChild(li);
   inputItem.value = "";
-   select()
+  select();
 });
 
 const botaoDelete = document.querySelectorAll(".delete");
@@ -59,11 +59,10 @@ botaoDelete.forEach((button) => {
 const p = document.querySelector(".warning");
 //função para exibir alerta
 function alerta() {
-   p.style.display = "flex";
+  p.style.display = "flex";
   setTimeout(() => {
     p.style.display = "none";
   }, 2000);
-  
 }
 //funcção para remover alerta
 function removeAlert() {
@@ -74,20 +73,19 @@ function removeAlert() {
 }
 
 //Função para riscar o item da lista
-function select(){
-  const inputCheckbox = document.querySelectorAll(".input-task")
-  const nameItem = document.querySelectorAll(".container_name_item")
-  inputCheckbox.forEach((input)=>{
-    input.addEventListener("change",()=>{
-     if(input.checked){
-       input.parentElement.style.textDecoration = "line-through"
-       input.parentElement.style.color = "red"
-     }else{
-      input.parentElement.style.textDecoration = "none"
-      input.parentElement.style.color = "black"
-     }
-    })
-  })
-   
+function select() {
+  const inputCheckbox = document.querySelectorAll(".input-task");
+  const nameItem = document.querySelectorAll(".container_name_item");
+  inputCheckbox.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        input.parentElement.style.textDecoration = "line-through";
+        input.parentElement.style.color = "red";
+      } else {
+        input.parentElement.style.textDecoration = "none";
+        input.parentElement.style.color = "black";
+      }
+    });
+  });
 }
-select()
+select();
